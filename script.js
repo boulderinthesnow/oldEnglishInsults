@@ -105,17 +105,40 @@ arr3 = [
 "mammet"
 ]	 
 
+shutupVal = [
+"quiet",
+"shut up",
+"end your mouth-flapping",
+"shut your face",
+"I hope you get a cramp in your tongue",
+"Shut your mouth",
+"Shut your pie hole",
+"Shut your yappers",
+"Silence",
+"Shut that hole in your face",
+"Hush up",
+]
 
-	$("#button").on('click', function(event) {
+
+	$("#silence-button").on('click', function(event) {
 		event.preventDefault();
-		$("#field").val("YOYOYO")
+		
+		console.log(randInsult())
+		insult = arr1[randInsult()] + " " + arr2[randInsult()] + " " + arr3[randInsult()]
+		header = shutupVal[randHeader()] + " you "
+		$("#field").val(header + insult)
+		console.log(insult)
 	});
 
-function randOne(){
-	var rand = Math.round(Math.random()*arr1.length-1)
+function randInsult(){
+	var rand = Math.floor(Math.random()*arr1.length)
+	return rand
 }
-console.log(randOne())
 
+function randHeader(){
+	var rand = Math.floor(Math.random()*shutupVal.length)
+	return rand
+}
 
 
 }); // end jquery doc ready
