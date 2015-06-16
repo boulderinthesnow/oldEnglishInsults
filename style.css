@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+}
+
+p {
+	color: Aquamarine;
+	font-size: 40px;
+	margin-left: 30%;	
+	margin-right: 30%;
+	/*width: 50%*/
+}
+
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: #b0e0e6;
+}
