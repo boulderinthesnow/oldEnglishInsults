@@ -109,6 +109,7 @@ $(function(){
 	"quiet",
 	"shut up",
 	"end your mouth-flapping",
+	"shut your cock holster",
 	"shut your face",
 	"I hope you get a cramp in your tongue",
 	"Shut your mouth",
@@ -122,7 +123,23 @@ $(function(){
 	"stop your yammering"
 	]
 
+	learnToPlayInsult = [
+	"learn to play",
+	"I should report you for feeding",
+	"You're as useless as a screen door on a submarine"
+	]
 
+	randomInsult = [
+	"Does your ass ever get jealous of the amount of shit that comes out of your mouth?",
+	"This fool needs to get a wife so he'll stop screwing us",
+	"You're a person of rare intelligence. It's rare when you show any.",
+	"You are living proof that God has a sense of humor.",
+	"Are you always an idiot, or just when I'm around?",
+	"Are your parents siblings?",
+	"You're so dense, light bends around you."
+	]
+
+	// THREE BUTTONS
 	$("#silence-button").on('click', function(event) {
 		event.preventDefault();
 		$("#insertHere").css("animation-name","fade")
@@ -137,7 +154,7 @@ $(function(){
 		console.log(insult)
 	}); // END SILENCE EVENT HANDLER
 
-	$("#score-button").on('click', function(event) {
+	$("#random-button").on('click', function(event) {
 		event.preventDefault();
 		$("#insertHere").css("animation-name","fade")
 		$("#insertHere").css("background-color","#00FF00")
@@ -159,9 +176,9 @@ $(function(){
 		setTimeout(function() {
 			$("#insertHere").css("animation-name","")
 		},500)
-		console.log(randInsult())
 		insult = arr1[randInsult()] + " " + arr2[randInsult()] + " " + arr3[randInsult()]
-		header = shutupVal[randHeader()] + " you "
+		header = learnToPlayInsult[randHeaderLearn()] + " you "
+		console.log(header + insult)
 		$("#insertHere").val(header + insult)
 		console.log(insult)
 	}); // END SILENCE EVENT HANDLER
@@ -175,6 +192,12 @@ $(function(){
 
 	function randHeader(){
 		var rand = Math.floor(Math.random()*shutupVal.length)
+		return rand
+	} // END RANDHEADER FUNCTION	
+
+	function randHeaderLearn(){
+		var rand = Math.floor(Math.random()*learnToPlayInsult.length)
+		console.log(rand)
 		return rand
 	} // END RANDHEADER FUNCTION
 
