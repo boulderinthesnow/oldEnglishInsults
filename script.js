@@ -165,7 +165,7 @@ $(function(){
 		console.log(randInsult())
 		insult = arr1[randInsult()] + " " + arr2[randInsult()] + " " + arr3[randInsult()]
 		header = shutupVal[randHeader()] + " you "
-		$("#insertHere").val(header + insult)
+		$("#insertHere").html(header + insult)
 		console.log(insult)
 	}); // END SILENCE EVENT HANDLER
 
@@ -179,8 +179,8 @@ $(function(){
 		insult = arr1[randInsult()] + " " + arr2[randInsult()] + " " + arr3[randInsult()]
 		header = learnToPlayInsult[randHeaderLearn()] + " you "
 		console.log(header + insult)
-		$("#insertHere").val(header + insult)
-		console.log(insult)
+		$("#insertHere").html(header + insult)
+		console.log
 	}); // END SILENCE EVENT HANDLER
 
 
