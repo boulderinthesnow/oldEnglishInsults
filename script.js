@@ -136,16 +136,17 @@ $(function(){
 	"You are living proof that God has a sense of humor.",
 	"Are you always an idiot, or just when I'm around?",
 	"Are your parents siblings?",
-	"You're so dense, light bends around you."
 	]
-
+	$("#insertHere").css("animation-name","animated")
 	// THREE BUTTONS
 	$("#silence-button").on('click', function(event) {
 		event.preventDefault();
 		$("#insertHere").css("animation-name","fade")
-		$("#insertHere").css("background-color","#d1203f")
+		$("#insertHere").css("background-color","#6cc270")
+		$("#silence-button").css("animation-name","swing")
 		setTimeout(function() {
 			$("#insertHere").css("animation-name","")
+			$("#silence-button").css("animation-name","")
 		},500)
 		console.log(randInsult())
 		insult = arr1[randInsult()] + " " + arr2[randInsult()] + " " + arr3[randInsult()]
@@ -157,10 +158,12 @@ $(function(){
 	$("#random-button").on('click', function(event) {
 		event.preventDefault();
 		$("#insertHere").css("animation-name","fade")
-		$("#insertHere").css("background-color","#00FF00")
+		$("#insertHere").css("background-color","#c2706c")
 		$("#insertHere").css("color","black")
+		$("#random-button").css("animation-name","swing")
 		setTimeout(function() {
 			$("#insertHere").css("animation-name","")
+			$("#random-button").css("animation-name","")
 		},500)
 		console.log(randInsult())
 		insult = arr1[randInsult()] + " " + arr2[randInsult()] + " " + arr3[randInsult()]
@@ -172,9 +175,11 @@ $(function(){
 	$("#learn-button").on('click', function(event) {
 		event.preventDefault();
 		$("#insertHere").css("animation-name","fade")
-		$("#insertHere").css("background-color","#d1203f")
+		$("#insertHere").css("background-color","#706cc2")
+		$("#learn-button").css("animation-name","swing")
 		setTimeout(function() {
 			$("#insertHere").css("animation-name","")
+			$("#learn-button").css("animation-name","")
 		},500)
 		insult = arr1[randInsult()] + " " + arr2[randInsult()] + " " + arr3[randInsult()]
 		header = learnToPlayInsult[randHeaderLearn()] + " you "
